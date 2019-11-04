@@ -1,1 +1,1 @@
-FROM jhipster/jhipster
+FROM jhipster/jhipster:latest
