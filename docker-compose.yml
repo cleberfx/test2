@@ -2,8 +2,10 @@ version: '3'
 
 services:
 jhipster:
+   extends:
     image:
       file: .gitpod.yml
+    service: jhipster
     ports:
       - 8000:8000
     networks:
