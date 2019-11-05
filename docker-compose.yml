@@ -3,7 +3,7 @@ version: '3'
 services:
 jhipster:
     image:
-      file: .gitpod.dockerfile
+      file: .gitpod.yml
     ports:
       - 8000:8000
     networks:
