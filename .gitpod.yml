@@ -3,8 +3,16 @@
       file: .gitpod.dockerfile
     
 
+ports:
+  - "8000:8000"
 
 
 
-
+  networks:
+      - compose-network
+      
+     
+      
+      
+      
   
