@@ -1,1 +1,1 @@
-FROM jhipster/jhipster:latest
+FROM docker/compose
