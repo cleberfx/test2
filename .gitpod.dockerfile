@@ -1,1 +1,1 @@
-FROM docker/compose:1.25.0-rc4
+FROM jpetazzo/dind:latest
