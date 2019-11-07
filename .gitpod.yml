@@ -3,9 +3,7 @@
       file: .gitpod.dockerfile
     
 
-tasks:
-- command: dockerd
-      
+
      
       
       
