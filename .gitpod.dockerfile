@@ -1,4 +1,5 @@
-FROM docker/compose:1.25.0-rc4
+FROM jhipster/jhipster:latest
 
+FROM mysql:5.7.28
 
 
