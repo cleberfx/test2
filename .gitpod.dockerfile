@@ -8,19 +8,19 @@ RUN apt-get update && apt-get install -y \
 
 USER gitpod
 # Apply user-specific settings
-ENV RUNUSER safeuser
-ENV WORKDIR /var/git-repo-home
-ENV UID 667
+#ENV RUNUSER safeuser
+#ENV WORKDIR /var/git-repo-home
+#ENV UID 667
 
-RUN useradd -d $WORKDIR -u $UID -m -s /bin/bash $RUNUSER
+#RUN useradd -d $WORKDIR -u $UID -m -s /bin/bash $RUNUSER
 
-VOLUME /var/git-repo-home
+#VOLUME /var/git-repo-home
 
-WORKDIR /var/git-repo-home
+#WORKDIR /var/git-repo-home
 
-USER $RUNUSER
+#USER $RUNUSER
 
-ENTRYPOINT ["git", "flow"]
+#ENTRYPOINT ["git", "flow"]
 
 # Give back control
 USER root
