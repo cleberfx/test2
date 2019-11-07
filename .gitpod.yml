@@ -1,5 +1,4 @@
-
-    image:
+image:
       file: .gitpod.dockerfile
     
 
@@ -9,3 +8,7 @@
       
       
   
+
+vscode:
+  extensions:
+    - mhutchie.git-graph@1.18.0:LzqJ/RuqakaRZud6LtvTQw==
