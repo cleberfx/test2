@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
 
 USER gitpod
 # Apply user-specific settings
-npm install -g generator-jhipster 	
+	
 
 
 # Give back control
