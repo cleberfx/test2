@@ -12,5 +12,6 @@ image:
 
 vscode:
   extensions:
-    - mhutchie.git-graph@1.18.0:LzqJ/RuqakaRZud6LtvTQw==
     - vector-of-bool.gitflow@1.2.1:PMW+5uFLySIkcokoRjBGQQ==
+    - vscjava.vscode-maven@0.19.1:BvBDxQECRYP8SiCZ8Csrsg==
+    - Pivotal.vscode-boot-dev-pack@0.0.8:BrfHu4se+ljgyUPUU+95ig==
