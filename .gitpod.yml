@@ -4,7 +4,7 @@ image:
 
 
 tasks:
-  - command:
+  - command: npm install -g generator-jhipster 
 
 
 
