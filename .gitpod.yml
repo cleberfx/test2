@@ -3,8 +3,8 @@ image:
 
 
 
-tasks:
-  - command: npm install -g generator-jhipster 
+#tasks:
+  #- command: npm install -g generator-jhipster 
 
 
 
