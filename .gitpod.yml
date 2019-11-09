@@ -13,5 +13,7 @@ image:
 vscode:
   extensions:
     - vector-of-bool.gitflow@1.2.1:PMW+5uFLySIkcokoRjBGQQ==
+    - vscjava.vscode-spring-initializr@0.4.6:WOgtgIwX3Ngy4pM9ArXjCQ==
+    - vscjava.vscode-spring-boot-dashboard@0.1.6:/G6fobfzYSrYZdNU7UB78g==
+    - Pivotal.vscode-spring-boot@1.12.0:jBoQhoPIn8lopj0vieWbMw==
     - vscjava.vscode-maven@0.19.1:BvBDxQECRYP8SiCZ8Csrsg==
-    - Pivotal.vscode-boot-dev-pack@0.0.8:BrfHu4se+ljgyUPUU+95ig==
