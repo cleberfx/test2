@@ -5,11 +5,12 @@ USER root
 RUN apt-get update && apt-get install -y \
         git-flow \
 	graphviz \
+        && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 	RUN mysql \
  	UPDATE mysql.user SET authentication_string = PASSWORD 'Root123!' WHERE User = 'root' AND Host = 'localhost'; \
 	FLUSH PRIVILEGES; \
-	exit; \
-        && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
+	exit; 
+	
 
 USER gitpod
 # Apply user-specific settings
