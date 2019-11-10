@@ -13,10 +13,10 @@ USER gitpod
 # Apply user-specific settings
 	RUN bash -c "npm install -g generator-jhipster \
 	&& npm install -g @angular/cli"
-	CMD bash -c "mysql \
+	CMD mysql \
  	&& UPDATE mysql.user SET authentication_string = PASSWORD 'Root123!' WHERE User = 'root' AND Host = 'localhost'; \
 	&& FLUSH PRIVILEGES; \
-	&& exit;"
+	&& exit;
 #ENV MYSQL_ROOT_PASSWORD=Root123!
 
 # Give back control
