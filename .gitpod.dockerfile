@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
         git-flow \
 	graphviz \
 	RUN mysql \
- 	&& UPDATE mysql.user SET authentication_string = PASSWORD ('Root123!') WHERE User = 'root' AND Host = 'localhost'; \
+ 	&& UPDATE mysql.user SET authentication_string = PASSWORD 'Root123!' WHERE User = 'root' AND Host = 'localhost'; \
 	&& FLUSH PRIVILEGES; \
 	&& exit; \
         && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
