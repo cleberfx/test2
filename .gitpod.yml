@@ -1,8 +1,7 @@
 image:
       file: .gitpod.dockerfile
 
-environment:
-    MYSQL_ROOT_PASSWORD: Root123!
+
 
 #tasks:
   #- command: npm install -g generator-jhipster 
