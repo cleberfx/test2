@@ -17,7 +17,7 @@ USER gitpod
  	#UPDATE mysql.user SET authentication_string = PASSWORD 'Root123!' WHERE User = 'root' AND Host = 'localhost'; \
 	#&& FLUSH PRIVILEGES; \
 	# && exit; 
-ENV MYSQL_ROOT_PASSWORD=Root123!
+#ENV MYSQL_ROOT_PASSWORD=Root123!
 
 # Give back control
 USER root
