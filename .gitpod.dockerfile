@@ -14,7 +14,7 @@ USER gitpod
 	RUN bash -c "npm install -g generator-jhipster \
 	&& npm install -g @angular/cli"
 	CMD ["bash", "-c", "mysql \
- 	 && UPDATE mysql.user SET authentication_string = PASSWORD 'Root123!' WHERE User = 'root' AND Host = 'localhost';  \
+ 	 && UPDATE mysql.user SET authentication_string = PASSWORD ('Root123!') WHERE User = 'root' AND Host = 'localhost';  \
  	 && FLUSH PRIVILEGES;  \
 	 && exit;"]
 #ENV MYSQL_ROOT_PASSWORD=Root123!
