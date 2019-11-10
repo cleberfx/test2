@@ -1,14 +1,15 @@
 image:
       file: .gitpod.dockerfile
 
+environment:
+    MYSQL_ROOT_PASSWORD: Root123!
 
-
-tasks:
+#tasks:
   #- command: npm install -g generator-jhipster 
-- command: mysql 
-- command: UPDATE mysql.user SET authentication_string = PASSWORD ('Root123!') WHERE User = 'root' AND Host = 'localhost'; 
-- command: FLUSH PRIVILEGES; 
-- command: exit; 
+#- command: mysql 
+#- command: UPDATE mysql.user SET authentication_string = PASSWORD ('Root123!') WHERE User = 'root' AND Host = 'localhost'; 
+#- command: FLUSH PRIVILEGES; 
+#- command: exit; 
 
 
 
