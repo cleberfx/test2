@@ -8,11 +8,13 @@ RUN apt-get update && apt-get install -y \
         && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 	
 	
+	
 
 USER gitpod
 # Apply user-specific settings
 	RUN bash -c "npm install -g generator-jhipster \
 	&& npm install -g @angular/cli"
+	
 	CMD ["bash", "-c", "mysql \
  	 && UPDATE mysql.user SET authentication_string = PASSWORD ('Root123!') WHERE User = 'root' AND Host = 'localhost';  \
  	 && FLUSH PRIVILEGES;  \
