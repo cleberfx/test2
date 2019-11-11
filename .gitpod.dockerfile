@@ -11,11 +11,7 @@ RUN apt-get update && apt-get install -y \
 	graphviz \
         && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 	
-CMD     bash -c "mysql \
- 	 && UPDATE mysql.user SET authentication_string = PASSWORD ('Root123!') WHERE User = 'root' AND Host = 'localhost';  \
- 	 && FLUSH PRIVILEGES;  \
-	 && exit;"
-	
+
 	
 
 USER gitpod
@@ -32,3 +28,8 @@ USER gitpod
 # Give back control
 USER root
 
+CMD     bash -c "mysql \
+ 	 && UPDATE mysql.user SET authentication_string = PASSWORD ('Root123!') WHERE User = 'root' AND Host = 'localhost';  \
+ 	 && FLUSH PRIVILEGES;  \
+	 && exit;"
+	
