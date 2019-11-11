@@ -7,7 +7,7 @@ tasks:
   #- command: npm install -g generator-jhipster 
  - command: mysql \
  #- command: SET PASSWORD FOR 'root'@'localhost' = PASSWORD ("Root123!"); \
-    && FLUSH PRIVILEGES; \
+ - command: FLUSH PRIVILEGES; \
     && exit; 
 
 
