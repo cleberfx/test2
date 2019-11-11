@@ -28,8 +28,5 @@ USER gitpod
 # Give back control
 USER root
 
-CMD     bash -c "mysql \
- 	 && UPDATE mysql.user SET authentication_string = PASSWORD ('Root123!') WHERE User = 'root' AND Host = 'localhost';  \
- 	 && FLUSH PRIVILEGES;  \
-	 && exit;"
+
 	
