@@ -6,9 +6,10 @@ image:
 tasks:
   #- command: npm install -g generator-jhipster 
  - command: mysql \
-  && mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD ("Root123!"); \
-  && mysql> FLUSH PRIVILEGES; \
-  && mysql> exit; 
+  && USE mysql; \
+  && SET PASSWORD FOR 'root'@'localhost' = PASSWORD ("Root123!"); \
+  && FLUSH PRIVILEGES; \
+  && exit; 
 
 
 
