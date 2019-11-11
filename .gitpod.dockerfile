@@ -27,6 +27,6 @@ USER gitpod
 # Give back control
 USER root
 
-CMD mysql -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD ('Root123@');"
+RUN mysql -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD ('Root123@');"
 
 	
