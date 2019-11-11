@@ -3,9 +3,9 @@ image:
 
 
 
-#tasks:
+tasks:
   #- command: npm install -g generator-jhipster 
-- command: mysql \
+ - command: mysql \
     && UPDATE mysql.user SET authentication_string = PASSWORD ('Root123!') WHERE User = 'root' AND Host = 'localhost'; \
     && FLUSH PRIVILEGES; \
     && exit; 
