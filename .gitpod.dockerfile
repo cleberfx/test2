@@ -9,11 +9,12 @@ USER root
 RUN apt-get update && apt-get install -y \
         git-flow \
 	graphviz \
-	mysqld_safe & until mysqladmin ping; do sleep 1; done && \
-	mysql -uroot -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD ('Root123@');" \
-        && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
-#RUN mysqld_safe & until mysqladmin ping; do sleep 1; done && \
-    #mysql -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD ('Root123@');"
+	&& apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
+	
+RUN mysqld_safe & until mysqladmin ping; do sleep 1; done && \
+    mysql -uroot -e "CREATE DATABASE somedb;" && \
+    mysql -uroot -e "CREATE USER 'someuser'@'localhost' IDENTIFIED BY 'somepassword';" && \
+    mysql -uroot -e "GRANT ALL PRIVILEGES ON somedb.* TO 'someuser'@'localhost';"
 	
 
 USER gitpod
