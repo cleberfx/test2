@@ -9,6 +9,8 @@ USER root
 RUN apt-get update && apt-get install -y \
         git-flow \
 	graphviz \
+	mysqld_safe & until mysqladmin ping; do sleep 1; done && \
+	mysql -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD ('Root123@');" \
         && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 #RUN mysqld_safe & until mysqladmin ping; do sleep 1; done && \
     #mysql -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD ('Root123@');"
