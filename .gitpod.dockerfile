@@ -18,7 +18,10 @@ USER gitpod
 	RUN bash -c "npm install -g generator-jhipster \
 	&& npm install -g @angular/cli"
 	
-	RUN mysql -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD ('Root123@');"
+	#RUN mysql -e 
+	
+RUN mysqld_safe & until mysqladmin ping; do sleep 1; done && \
+    mysql -uroot -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD ('Root123@');"
 	
  	#RUN mysql -e "FLUSH PRIVILEGES;"
 	 #&& exit;"]
