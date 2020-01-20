@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
 	graphviz \
         && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 RUN mysqld_safe & until mysqladmin ping; do sleep 1; done && \
-    mysql -uroot -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD ('Root123@');"
+    mysql -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD ('Root123@');"
 	
 
 USER gitpod
