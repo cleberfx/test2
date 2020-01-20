@@ -20,8 +20,8 @@ RUN mysqld_safe & until mysqladmin ping; do sleep 1; done && \
 USER gitpod
 # Apply user-specific settings
 	RUN bash -c "npm install -g generator-jhipster \
-	&& npm install -g @angular/cli" \
- 	&& ./mysql -uroot -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD ('Root123@');"
+	&& npm install -g @angular/cli" 
+ 	#&& ./mysql -uroot -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD ('Root123@');"
 	#RUN mysql -e 
 	
 
